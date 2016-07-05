@@ -7,22 +7,56 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 <h:head>
-	<!--  <h:outputStylesheet name="css/style.css" /> -->
+	<h:outputStylesheet name="css/style.css" />
 </h:head>
 
-<h:body>
+<h:body style="display:block; text-align:center;">
 
 	<h:form>
 		<!-- BORDER LAYOUT / LEFT + CENTER + UP -->
-		<p:layout style="min-width:600px;min-height:800px;">
+		<p:layout style="width:1200px;height:800px;">
 
-			<p:layoutUnit position="north" size="50" collapsible="true">
+			<p:layoutUnit position="north" size="200" closable="false"
+				collapsible="false" resizable="false" >
 				<h:form id="menuBarNorth">
-					<h:outputText value="Hello" style="font-size:20px !important;"></h:outputText>
+					<p:graphicImage value="resources/images/menubar.jpg" height="132px"
+						width="1185px">
+						<p:megaMenu orientation="horizontal">
+							<p:submenu label="Home" styleClass="menubarnorthtext">
+								<p:column>
+									<p:submenu label="Home" styleClass="menubarnorthtext">
+										<p:menuitem value="News" url="#" />
+										<p:menuitem value="About" url="#" />
+									</p:submenu>
+								</p:column>
+							</p:submenu>
+							<p:submenu label="Loops" styleClass="menubarnorthtext">
+								<p:column>
+									<p:submenu label="Loops" styleClass="menubarnorthtext">
+										<p:menuitem value="Buy Loops" url="#" />
+										<p:menuitem value="Most Rated" url="#" />
+										<p:menuitem value="Most Downloaded" url="#" />
+									</p:submenu>
+								</p:column>
+							</p:submenu>
+							<p:submenu label="Info" styleClass="menubarnorthtext">
+								<p:column>
+									<p:submenu label="Info" styleClass="menubarnorthtext">
+										<p:menuitem value="Impressum" url="#" />
+										<p:menuitem value="Contact" url="#" />
+									</p:submenu>
+								</p:column>
+							</p:submenu>
+
+
+						</p:megaMenu>
+
+					</p:graphicImage>
 				</h:form>
+
 			</p:layoutUnit>
 
-			<p:layoutUnit position="center">
+			<p:layoutUnit position="center" >
 
 				<ui:insert name="centersource">
 				</ui:insert>
@@ -33,5 +67,5 @@
 </h:body>
 </html>
 
-<!-- Next Steps: JSF Controller einrichten, Dependencies von PF hinzufügen: Commit auf Branch -->
+<!-- Next Steps: JSF Controller einrichten, Weiter ein TextTutorial zum Merging und Branching lesen und anwenden!, Jenkins -->
 
