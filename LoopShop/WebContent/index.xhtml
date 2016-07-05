@@ -17,9 +17,9 @@
 		<p:layout style="width:1200px;height:800px;">
 
 			<p:layoutUnit position="north" size="200" closable="false"
-				collapsible="false" resizable="false" >
+				collapsible="false" resizable="false">
 				<h:form id="menuBarNorth">
-					<p:graphicImage value="resources/images/menubar.jpg" height="132px"
+					<p:graphicImage value="/resources/images/menubar.jpg" height="132px"
 						width="1185px">
 						<p:megaMenu orientation="horizontal">
 							<p:submenu label="Home" styleClass="menubarnorthtext">
@@ -56,10 +56,14 @@
 
 			</p:layoutUnit>
 
-			<p:layoutUnit position="center" >
-
-				<ui:insert name="centersource">
-				</ui:insert>
+			<p:layoutUnit position="center">
+				<h:form id="indexCenter">
+					<ui:insert name="centersource">
+						<f:metadata>
+							<f:viewAction action="view/news.xhtml" />
+						</f:metadata>
+					</ui:insert>
+				</h:form>
 			</p:layoutUnit>
 		</p:layout>
 	</h:form>

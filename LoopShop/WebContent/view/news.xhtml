@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" template="/index.xhtml">
+
+	<ui:define name="centersource">
+		<h:form >
+			<ui:include src="/view/newsFieldSet.xhtml">
+				<ui:param name="title" value="#{newsViewController.getNewsTitle(0)}"></ui:param>
+				<ui:param name="image" value="#{newsViewController.getNewsImage(0)}"></ui:param>
+				<ui:param name="description"
+					value="#{newsViewController.getNewsDescription(0)}"></ui:param>
+			</ui:include>
+			<ui:include src="/view/newsFieldSet.xhtml">
+				<ui:param name="title" value="#{newsViewController.getNewsTitle(1)}"></ui:param>
+				<ui:param name="image" value="#{newsViewController.getNewsImage(1)}"></ui:param>
+				<ui:param name="description"
+					value="#{newsViewController.getNewsDescription(1)}"></ui:param>
+			</ui:include>
+			<ui:include src="/view/newsFieldSet.xhtml">
+				<ui:param name="title" value="#{newsViewController.getNewsTitle(2)}"></ui:param>
+				<ui:param name="image" value="#{newsViewController.getNewsImage(2)}"></ui:param>
+				<ui:param name="description"
+					value="#{newsViewController.getNewsDescription(2)}"></ui:param>
+			</ui:include>
+			<ui:include src="/view/newsFieldSet.xhtml">
+				<ui:param name="title" value="#{newsViewController.getNewsTitle(3)}"></ui:param>
+				<ui:param name="image" value="#{newsViewController.getNewsImage(3)}"></ui:param>
+				<ui:param name="description"
+					value="#{newsViewController.getNewsDescription(3)}"></ui:param>
+			</ui:include>
+			<ui:include src="/view/newsFieldSet.xhtml">
+				<ui:param name="title" value="#{newsViewController.getNewsTitle(4)}"></ui:param>
+				<ui:param name="image" value="#{newsViewController.getNewsImage(4)}"></ui:param>
+				<ui:param name="description"
+					value="#{newsViewController.getNewsDescription(4)}"></ui:param>
+			</ui:include>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,17 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form>
+		<p:fieldset legend="#{title}" style="margin-bottom:20px"
+			styleClass="blogtext">
+			<h:panelGrid columns="2" cellpadding="5">
+				<p:graphicImage name="demo/images/#{image}" />
+				<h:outputText value="#{description}" />
+			</h:panelGrid>
+		</p:fieldset>
+	</h:form>
+
+</ui:composition>
