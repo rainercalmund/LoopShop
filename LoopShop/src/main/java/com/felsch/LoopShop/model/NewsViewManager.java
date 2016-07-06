@@ -12,7 +12,7 @@ public class NewsViewManager {
 
 	private LinkedList<NewsBlog> newsBlogs;
 	private final static String DUMMYDESCR = "Francis Ford Coppolas legendary continuation and sequel to his landmark 1972 film, The_Godfather, parallels the young Vito Corleones rise with his son Michaels spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.";
-	private static final String DUMMYTITLE = "This is a Title of a Newspost";
+	private static final String DUMMYTITLE = "News: This is a Testpage!";
 	private static final String DUMMYIMAGE = ".jpg";
 
 	public LinkedList<NewsBlog> setUpNewsBlogs() {
