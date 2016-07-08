@@ -12,43 +12,50 @@
 
 <h:body style="display:block; text-align:center;">
 
-	<h:form>
+	<h:form id="indexForm">
 		<!-- BORDER LAYOUT / LEFT + CENTER + UP -->
-		<p:layout style="width:1400px;height:1200px;" fullPage="true">
+		<p:layout id="indexLayout" fullPage="true">
+
+			<!-- zIndex von North erhöhen? Menubuttons centrieren? -->
 
 			<p:layoutUnit position="north" size="300" closable="false"
 				collapsible="false" resizable="false">
 				<h:form id="menuBarNorth">
-					<p:graphicImage value="/resources/images/menubar.jpg"
-						height="238px" width="1405px"						>
-						<p:megaMenu orientation="horizontal">
-							<p:submenu label="Home" styleClass="menubarnorthtext">
-								<p:column>
-									<p:submenu label="Home" styleClass="menubarnorthtext">
-										<p:menuitem value="News" url="#" />
-										<p:menuitem value="About" url="#" />
-									</p:submenu>
-								</p:column>
-							</p:submenu>
-							<p:submenu label="Loops" styleClass="menubarnorthtext">
-								<p:column>
-									<p:submenu label="Loops" styleClass="menubarnorthtext">
-										<p:menuitem value="Buy Loops" url="#" />
-										<p:menuitem value="Most Rated" url="#" />
-										<p:menuitem value="Most Downloaded" url="#" />
-									</p:submenu>
-								</p:column>
-							</p:submenu>
-							<p:submenu label="Info" styleClass="menubarnorthtext">
-								<p:column>
-									<p:submenu label="Info" styleClass="menubarnorthtext">
-										<p:menuitem value="Impressum" url="#" />
-										<p:menuitem value="Contact" url="#" />
-									</p:submenu>
-								</p:column>
-							</p:submenu>
-						</p:megaMenu>
+					<!-- Check for Client Browser Screen Size -->
+					<p:remoteCommand name="sendParams"
+						actionListener="#{newsViewController.calculateScreenSize}"
+						update="banner" />
+					<p:graphicImage id="banner" value="/resources/images/menubar.jpg"
+						height="238px" width="#{newsViewController.screenWidth}">
+
 					</p:graphicImage>
+					<p:megaMenu orientation="horizontal" styleClass="megamenu">
+						<p:submenu label="Home" styleClass="menubarnorthtext">
+							<p:column>
+								<p:submenu label="Home" styleClass="menubarnorthtext">
+									<p:menuitem value="News" url="#" />
+									<p:menuitem value="About" url="#" />
+								</p:submenu>
+							</p:column>
+						</p:submenu>
+						<p:submenu label="Loops" styleClass="menubarnorthtext">
+							<p:column>
+								<p:submenu label="Loops" styleClass="menubarnorthtext">
+									<p:menuitem value="Buy Loops" url="#" />
+									<p:menuitem value="Most Rated" url="#" />
+									<p:menuitem value="Most Downloaded" url="#" />
+								</p:submenu>
+							</p:column>
+						</p:submenu>
+						<p:submenu label="Info" styleClass="menubarnorthtext">
+							<p:column>
+								<p:submenu label="Info" styleClass="menubarnorthtext">
+									<p:menuitem value="Impressum" url="#" />
+									<p:menuitem value="Contact" url="#" />
+								</p:submenu>
+							</p:column>
+						</p:submenu>
+					</p:megaMenu>
 				</h:form>
 
 			</p:layoutUnit>
@@ -65,6 +72,12 @@
 		</p:layout>
 	</h:form>
 
+	<script>
+		sendParams([ {
+			name : 'size',
+			value : document.documentElement.clientWidth - 10
+		} ]);
+	</script>
 </h:body>
 </html>
 

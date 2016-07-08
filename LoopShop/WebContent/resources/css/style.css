@@ -1,3 +1,22 @@
+.megamenu .ui-menubar {
+	text-align: center;
+}
+
+.megamenu .ui-menu-list {
+	display: inline-block;
+	z-index: 40 !important;
+	overflow: visible !important;
+}
+
+.ui-layout-north {
+	z-index: 40 !important;
+	overflow: visible !important;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+}
+
 .blogtext {
 	font-size: 12px !important;
 	font-family: Calibri !important;
