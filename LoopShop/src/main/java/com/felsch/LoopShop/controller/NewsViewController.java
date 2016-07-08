@@ -1,7 +1,6 @@
 package com.felsch.LoopShop.controller;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javax.annotation.PostConstruct;
@@ -9,9 +8,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.event.AjaxBehaviorEvent;
-
-import org.primefaces.context.RequestContext;
 
 import com.felsch.LoopShop.model.NewsBlog;
 import com.felsch.LoopShop.model.NewsViewManager;
