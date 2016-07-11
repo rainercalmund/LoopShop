@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 
-import com.felsch.LoopShop.model.NewsBlog;
+import com.felsch.LoopShop.entities.NewsBlog;
 import com.felsch.LoopShop.model.NewsViewManager;
 
 import junit.framework.TestCase;

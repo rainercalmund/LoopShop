@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
+import com.felsch.LoopShop.entities.NewsBlog;
+
 @ManagedBean(name = "newsViewManager")
 @ViewScoped
 public class NewsViewManager {

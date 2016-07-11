@@ -2,10 +2,41 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui" template="/index.xhtml">
 
-	<h:form>
-		
-	</h:form>
+	<ui:define name="centersource">
+		<h:form>
+			<p:dataScroller value="#{buyLoopsViewController.loops}" var="loop"
+				chunkSize="10">
 
+				<f:facet name="loader">
+					<p:commandButton type="button" value="More"
+						icon="ui-icon-circle-triangle-s" />
+				</f:facet>
+
+				<h:panelGrid columns="3" style="width:100%"
+					columnClasses="logo,detail,blogtext">
+					<p:graphicImage name="/images/#{loop.image}" />
+
+					<p:outputPanel>
+						<h:panelGrid columns="1" cellpadding="5">
+							<h:outputLink outcome="#{loop.name}">
+								<h:outputText value="#{loop.name}" style="font-weight: bold" />
+							</h:outputLink>
+
+							<h:outputText value="#{loop.category}" />
+
+							<h:outputText value="#{loop.bpm}" />
+						</h:panelGrid>
+					</p:outputPanel>
+
+					<p:outputPanel style="margin-right:20px; margin-left:20px;">
+						<h:outputText value="Description:" />
+						<h:outputText value="#{loop.descr}" />
+					</p:outputPanel>
+
+				</h:panelGrid>
+			</p:dataScroller>
+		</h:form>
+	</ui:define>
 </ui:composition>

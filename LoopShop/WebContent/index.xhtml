@@ -16,8 +16,6 @@
 		<!-- BORDER LAYOUT / LEFT + CENTER + UP -->
 		<p:layout id="indexLayout" fullPage="true">
 
-			<!-- zIndex von North erhöhen? Menubuttons centrieren? -->
-
 			<p:layoutUnit position="north" size="300" closable="false"
 				collapsible="false" resizable="false">
 				<h:form id="menuBarNorth">
@@ -33,7 +31,7 @@
 						<p:submenu label="Home" styleClass="menubarnorthtext">
 							<p:column>
 								<p:submenu label="Home" styleClass="menubarnorthtext">
-									<p:menuitem value="News" url="#" />
+									<p:menuitem value="News" outcome="/view/news" />
 									<p:menuitem value="About" url="#" />
 								</p:submenu>
 							</p:column>
@@ -41,7 +39,7 @@
 						<p:submenu label="Loops" styleClass="menubarnorthtext">
 							<p:column>
 								<p:submenu label="Loops" styleClass="menubarnorthtext">
-									<p:menuitem value="Buy Loops" url="#" />
+									<p:menuitem value="Buy Loops" outcome="/view/buyloops" />
 									<p:menuitem value="Most Rated" url="#" />
 									<p:menuitem value="Most Downloaded" url="#" />
 								</p:submenu>

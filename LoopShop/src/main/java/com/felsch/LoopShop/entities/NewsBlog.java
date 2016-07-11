@@ -1,4 +1,4 @@
-package com.felsch.LoopShop.model;
+package com.felsch.LoopShop.entities;
 
 public class NewsBlog {
 

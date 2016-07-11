@@ -9,7 +9,7 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
-import com.felsch.LoopShop.model.NewsBlog;
+import com.felsch.LoopShop.entities.NewsBlog;
 import com.felsch.LoopShop.model.NewsViewManager;
 
 @ManagedBean
