@@ -2,6 +2,10 @@
 	text-align: center;
 }
 
+.panelGridCenter {
+	margin: 0 auto;
+}
+
 .megamenu .ui-menu-list {
 	display: inline-block;
 	z-index: 40 !important;

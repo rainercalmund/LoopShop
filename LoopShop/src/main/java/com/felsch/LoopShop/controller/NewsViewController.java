@@ -71,4 +71,8 @@ public class NewsViewController implements Serializable {
 		System.out.println(screenWidth);
 	}
 
+	public void sayHello() {
+		System.out.println("HELLO");
+	}
+
 }
