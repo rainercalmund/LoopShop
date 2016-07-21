@@ -5,8 +5,10 @@
 	xmlns:p="http://primefaces.org/ui" template="/index.xhtml">
 
 	<ui:define name="centersource">
-		<p:commandButton value="Start!" process="@this"
-			action="#{studioViewController.startApp}" />
+		<h:form id="startButton">
+			<p:commandButton value="Start!" process="@this"
+				action="#{studioViewController.startApp}" />
+		</h:form>
 	</ui:define>
 
 </ui:composition>

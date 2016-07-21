@@ -20,6 +20,10 @@ public class NewsViewControllerTest extends TestCase {
 	private LinkedList<NewsBlog> newsBlogs;
 	static final String TEST = "test";
 
+	/**
+	 * 
+	 * Das ist eine Testklasse
+	 */
 	protected void setUp() throws Exception {
 		newsViewController = new NewsViewController();
 		newsViewManager = Mockito.mock(NewsViewManager.class);

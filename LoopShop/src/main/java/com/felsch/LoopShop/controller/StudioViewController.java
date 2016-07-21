@@ -1,27 +1,33 @@
 package com.felsch.LoopShop.controller;
 
-import java.io.IOException;
 import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
-import javafx.stage.Stage;
+import com.felsch.LoopShop.model.StudioViewManager;
 
 @ManagedBean
 @ViewScoped
 public class StudioViewController implements Serializable {
 
-	public void startApp() {
-		System.out.println("Starte App..");
+	private String app;
 
-		try {
-			Runtime rt = Runtime.getRuntime();
-			Process process = rt.exec("java -jar D:\\workspace\\SoundApp\\SoundApp.jar");
-		} catch (IOException e) { // TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	@ManagedProperty(value = "#{studioViewManager}")
+	private StudioViewManager studioViewManager;
 
+	public String startApp() {
+		System.out.println("Bin im Controller und gehen nun in den Manager");
+		return studioViewManager.startApplication();
+	}
+
+	public void setStudioViewManager(StudioViewManager studioViewManager) {
+		this.studioViewManager = studioViewManager;
+	}
+
+	public StudioViewManager getStudioViewManager() {
+		return studioViewManager;
 	}
 
 }
